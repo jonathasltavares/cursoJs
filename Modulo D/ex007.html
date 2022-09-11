@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: stretch;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+        }
+        header{
+            display: block;
+            align-items: center;
+            background-color: rgb(82, 0, 57);
+            width: 100%;
+            height: 50px;
+            padding: 0px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            font-family: 'Concert One', cursive;
+            color: #ffffff;
+        }
+        h1{
+            margin: 10px;
+        }
+        div#conteudo{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Concert One', cursive;
+            color: #ffffff;
+            font-weight: 50;
+            font-size: 30px;
+            width: 100%;
+            height: 100px;
+        }
+        div#resultado{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Concert One', cursive;
+            color: #ffffff;
+            font-weight: 50;
+            font-size: 30px;
+            width: 100%;
+            height: 100px;
+        }
+        body{
+            background-color: rgb(34, 0, 24);
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header><h1>DESCUBRA SE VOCÊ É BRASILEIRO</h1></header>
+        <div id="conteudo">
+            Informe seu país: <input type="text" name="txtpais" id="txtpais">
+            <input type="button" value="verificar" onclick="teste()">
+        </div>
+        <div id="resultado"></div>
+    </section>
+    
+    <script>
+        function teste(){
+            var pais = window.document.getElementById("txtpais")
+            var res = window.document.getElementById("resultado")
+            res.innerHTML = `<p>País digitado: <strong>${pais.value}</strong>.</p>`
+            var body = window.document.querySelector("body")
+            var image = "image/bandeira-do-brasil-fundo_135932-1335.webp"
+            if(pais.value == "brasil" || pais.value == "Brasil"){
+                res.innerHTML += `<p>Logo, você é <strong>brasileiro</strong>.</p>`;
+                body.style.backgroundImage = `url(${image})`;
+            }else{
+                res.innerHTML += `<p>Logo, você é <strong>estrangeiro</strong>.</p>`
+                body.style.background = "background-color: rgb(34, 0, 24);"
+            } 
+        }
+        
+    </script>
+</body>
+</html>

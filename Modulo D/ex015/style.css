@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap');
+body{
+    background-color: rgba(38, 0, 255, 0.87);
+    font-size: 15pt;
+    font-family: 'Concert One', cursive;
+
+}
+header{
+    color:black;
+    text-align: center;
+
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562)
+    
+
+
+
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+
+}
